@@ -1,6 +1,7 @@
 // DEPENDENCIES
 const cors = require("cors");
 const express = require("express");
+const boutiqueController = require("./controllers/boutiqueController");
 
 // CONFIGURATION
 const app = express();
@@ -11,7 +12,7 @@ app.use(express.json()); // Parse incoming JSON
 
 // ROUTES
 app.get("/", (req, res) => {
-  res.send("Hello, world!");
+  res.send("Hello bad and boujee bitches");
 });
 
 /////////////////////////////////////
@@ -21,13 +22,18 @@ const db = require("./db/dbConfig.js");
 
 app.get("/test", async (req, res) => {
   try {
-    const allDays = await db.any("SELECT * FROM test");
+    const allDays = await db.any("SELECT * FROM boutique");
     res.json(allDays);
   } catch (err) {
     res.json(err);
   }
 });
 
+app.use("/boutique", boutiqueController);
+
+app.get("*", (req, res) => {
+  res.status(404).send("page not found")
+})
 /////////////////////////////////////
 // REMOVE AFTER SUCCESSFUL DEPLOYMENT
 /////////////////////////////////////
