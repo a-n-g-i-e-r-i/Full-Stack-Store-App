@@ -1,6 +1,14 @@
-DROP TABLE IF EXISTS test;
+DROP DATABASE IF EXISTS boutique_dev;
+CREATE DATABASE boutique_dev;
 
-CREATE TABLE test (
+\c boutique_dev;
+
+CREATE TABLE boutique (
     id SERIAL PRIMARY KEY, 
-    name TEXT
+    name TEXT,
+    brand TEXT,
+    category TEXT,
+    price INT,
+    in_stock BOOLEAN,
+    url TEXT
 );
