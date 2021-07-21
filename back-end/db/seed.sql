@@ -1,4 +1,4 @@
-\c boutique_dev;
+\c postgres;
 
 INSERT INTO boutique (name, brand, category, price, in_stock, url) VALUES
 ('Marmont Bag', 'Gucci', 'handbag', 2200.00, true , 'https://www.pngitem.com/pimgs/m/347-3474254_gucci-marmont-leather-443497-dtdid-1000-hd-png.png'),

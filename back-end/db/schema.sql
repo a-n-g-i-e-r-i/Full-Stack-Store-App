@@ -1,7 +1,7 @@
-DROP DATABASE IF EXISTS boutique_dev;
-CREATE DATABASE boutique_dev;
+DROP DATABASE IF EXISTS postgres;
+CREATE DATABASE postgres;
 
-\c boutique_dev;
+\c postgres;
 
 CREATE TABLE boutique (
     id SERIAL PRIMARY KEY, 
