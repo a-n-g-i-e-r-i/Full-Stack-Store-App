@@ -32,8 +32,8 @@ app.get("/test", async (req, res) => {
 app.use("/boutique", boutiqueController);
 
 app.get("*", (req, res) => {
-  res.status(404).send("page not found")
-})
+  res.status(404).send("page not found");
+});
 /////////////////////////////////////
 // REMOVE AFTER SUCCESSFUL DEPLOYMENT
 /////////////////////////////////////
