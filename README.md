@@ -104,11 +104,17 @@ Go back to the heroku database view => settings
 
 - it should open a `pg shell`
 
+- Update the database connection information in files `prod_schema.sql` and `prod_seed.sql`
+
+```
+\c d9k45j79g8bh4v; <-- change the database name to the Heroku value of PG_DATABASE 
+```
+
 Run the following:
 
-- `\i ./db/schema.sql`
+- `\i ./db/prod_schema.sql`
   - success should say `CREATE TABLE`
-- `\i ./db/seed.sql`
+- `\i ./db/prod_seed.sql`
   - success should say `INSERT 0 7`
 - `\q`
 
